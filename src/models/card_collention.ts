@@ -12,8 +12,8 @@ export abstract class CardCollection {
     return this.cards.length
   }
 
-  public slice(): Card[] {
-    return this.cards.map(c => c)
+  public slice(start = 0, end?: number): Card[] {
+    return this.cards.slice(start, end)
   }
 
   public suffle(): void {

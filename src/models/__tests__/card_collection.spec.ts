@@ -28,6 +28,28 @@ describe('Test CardCollection', () => {
     })
   })
 
+  describe('slice', () => {
+    const collection = new TestCollection(cards)
+
+    describe('引数なし', () => {
+      it('コレクションの中に存在するカードの配列が取得されること', () => {
+        expect(collection.slice()).toStrictEqual([c1, c2, c3, c4])
+      })
+    })
+
+    describe('startを与えたとき', () => {
+      it('引数で与えたindexから最後まで取得されること', () => {
+        expect(collection.slice(2)).toStrictEqual([c3, c4])
+      })
+    })
+
+    describe('start, endを与えたとき', () => {
+      it('startとして与えたindexからendとして与えたindexの前取得されること', () => {
+        expect(collection.slice(1, 3)).toStrictEqual([c2, c3])
+      })
+    })
+  })
+
   describe('take', () => {
     describe('引数なし', () => {
       const c = new TestCollection(cards)
