@@ -1,13 +1,14 @@
-import { Card, Suit } from "../cards/card";
+import { Card } from "../cards/card";
 import { CardCollection } from "../card_collention";
 
 describe('Test CardCollection', () => {
+  class TestCard extends Card { }
   class TestCollection extends CardCollection { }
 
-  const c1 = new Card(Suit.SPADE, 1)
-  const c2 = new Card(Suit.HEART, 1)
-  const c3 = new Card(Suit.DAIAMOND, 1)
-  const c4 = new Card(Suit.CLUB, 1)
+  const c1 = new TestCard()
+  const c2 = new TestCard()
+  const c3 = new TestCard()
+  const c4 = new TestCard()
   const cards = [c1, c2, c3, c4]
 
   describe('constructor', () => {
@@ -51,8 +52,8 @@ describe('Test CardCollection', () => {
   })
 
   describe('追加系', () => {
-    const c5 = new Card(Suit.SPADE, 2)
-    const c6 = new Card(Suit.HEART, 2)
+    const c5 = new TestCard()
+    const c6 = new TestCard()
     const add = [c5, c6]
 
     describe('addToTop', () => {
