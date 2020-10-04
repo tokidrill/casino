@@ -20,6 +20,14 @@ export abstract class CardCollection {
     this.cards = this.cards.sort(() => Math.random() - 0.5)
   }
 
+  public addToTop(cards: Card[]): void {
+    this.cards.unshift(...cards)
+  }
+
+  public addToBottom(cards: Card[]): void {
+    this.cards.push(...cards)
+  }
+
   public take(count = 1): Card[] {
     return this.cards.splice(0, count)
   }

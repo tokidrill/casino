@@ -50,6 +50,29 @@ describe('Test CardCollection', () => {
     })
   })
 
+  describe('追加系', () => {
+    const c5 = new Card(Suit.SPADE, 2)
+    const c6 = new Card(Suit.HEART, 2)
+    const add = [c5, c6]
+
+    describe('addToTop', () => {
+      it('上に任意の数追加されること', () => {
+        const base = new TestCollection(cards)
+        base.addToTop(add)
+        expect(base.slice()).toStrictEqual([c5, c6, c1, c2, c3, c4])
+      })
+    })
+
+    describe('addToBottom', () => {
+      it('下に任意の数追加されること', () => {
+        const base = new TestCollection(cards)
+        base.addToBottom(add)
+        expect(base.slice()).toStrictEqual([c1, c2, c3, c4, c5, c6])
+      })
+    })
+
+  })
+
   describe('take', () => {
     describe('引数なし', () => {
       const c = new TestCollection(cards)
