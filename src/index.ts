@@ -1,4 +1,4 @@
-import { Deck } from './models/deck'
+import { Deck } from "./models/deck"
 
 const deck = Deck.init()
 

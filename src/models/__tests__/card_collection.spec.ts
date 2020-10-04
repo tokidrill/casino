@@ -1,4 +1,4 @@
-import { Card } from "../cards/card";
+import { Card } from "../cards";
 import { CardCollection } from "../card_collention";
 
 describe('Test CardCollection', () => {

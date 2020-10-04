@@ -1,6 +1,4 @@
-import { Card } from "./card";
-import { Color } from "./types/color";
-import { CardRank } from "./types/rank";
+import { Card, CardRank, Color } from "."
 
 export enum Suit {
   SPADE = 'spade',
