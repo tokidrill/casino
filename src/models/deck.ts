@@ -24,10 +24,6 @@ export class Deck extends CardCollection {
     return deck
   }
 
-  get length(): number {
-    return this.cards.length
-  }
-
   public deal(): Card {
     return this.cards[0]
   }

@@ -18,4 +18,20 @@ describe('Test CardCollection', () => {
       expect(collection).toBeInstanceOf(TestCollection)
     })
   })
+
+  describe('get', () => {
+    describe('length', () => {
+      const cards = [
+        new Card(Suit.SPADE, 1),
+        new Card(Suit.HEART, 1),
+        new Card(Suit.DAIAMOND, 1),
+        new Card(Suit.CLUB, 1),
+      ]
+      const collection = new TestCollection(cards)
+
+      it('生成時与えられたカードの長さであること', () => {
+        expect(collection.length).toBe(cards.length)
+      })
+    })
+  })
 })

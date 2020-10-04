@@ -8,6 +8,10 @@ export abstract class CardCollection {
     this.cards = cards
   }
 
+  get length(): number {
+    return this.cards.length
+  }
+
   public suffle(): void {
     this.cards = this.cards.sort(() => Math.random() - 0.5)
   }
