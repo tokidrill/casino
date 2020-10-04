@@ -7,4 +7,8 @@ export abstract class CardCollection {
   constructor(cards: Card[]) {
     this.cards = cards
   }
+
+  public suffle(): void {
+    this.cards = this.cards.sort(() => Math.random() - 0.5)
+  }
 }

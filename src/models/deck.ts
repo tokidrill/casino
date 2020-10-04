@@ -18,7 +18,10 @@ export class Deck extends CardCollection {
       cards.push(new Card(Suit.CLUB, i as CardNumber))
     }
 
-    return new Deck(cards)
+    const deck = new Deck(cards)
+    deck.suffle()
+
+    return deck
   }
 
   get length(): number {
