@@ -23,8 +23,4 @@ export class Deck extends CardCollection {
 
     return deck
   }
-
-  public deal(): Card {
-    return this.cards[0]
-  }
 }
