@@ -12,10 +12,9 @@ export class Deck extends CardCollection {
   public static init(): Deck {
     const cards: Card[] = []
     for (let i = 1; i <= 13; i++) {
-      cards.push(new Card(Suit.SPADE, i as CardRank))
-      cards.push(new Card(Suit.HEART, i as CardRank))
-      cards.push(new Card(Suit.DAIAMOND, i as CardRank))
-      cards.push(new Card(Suit.CLUB, i as CardRank))
+      for (const suit in Suit) {
+        cards.push(new Card(suit as Suit, i as CardRank))
+      }
     }
 
     const deck = new Deck(cards)
