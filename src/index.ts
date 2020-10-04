@@ -1,5 +1,5 @@
-function hello(name: string): string {
-  return `Hello, ${name}!`
-}
+import { Deck } from './models/deck'
 
-console.log(hello('hogehoge'))
+const deck = Deck.init()
+
+console.log(deck.length)
