@@ -1,4 +1,4 @@
-import { Card, Suit } from '../card'
+import { Card, Suit } from '../cards/card'
 
 describe('Test Card', () => {
   describe('construntor', () => {

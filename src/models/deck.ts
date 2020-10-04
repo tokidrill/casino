@@ -1,4 +1,4 @@
-import { Card, CardRank, Suit } from './card'
+import { Card, CardRank, Suit } from './cards/card'
 import { CardCollection } from './card_collention'
 
 /**

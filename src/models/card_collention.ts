@@ -1,4 +1,4 @@
-import { Card } from './card'
+import { Card } from './cards/card'
 
 export abstract class CardCollection {
   // TODO: Setみたいにインスタンスで重複なしを表現できる型ない？？
