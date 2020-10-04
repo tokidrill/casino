@@ -4,11 +4,11 @@ describe('Test Card', () => {
   describe('construntor', () => {
     test('引数を与えて生成できること', () => {
       const suit = Suit.SPADE
-      const number = 1
+      const rank = 1
 
-      const card = new Card(suit, number)
+      const card = new Card(suit, rank)
       expect(card.suit).toBe(suit)
-      expect(card.number).toBe(number)
+      expect(card.rank).toBe(rank)
     })
   })
 })
